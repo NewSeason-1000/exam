@@ -46,7 +46,8 @@ print("Corrected text:", corrected_text)
 # Find misspelled words and their corrections
 corrections = {str(word): str(word.correct()) for word in blob.words if word.correct() != word}
 
-# Print misspelled words and their corrections
-print("Misspelled words and their corrections:")
+# Print misspelled words and their corrections // this is also known as -Levenshtein distance for word correction
+
+print("Misspelled words and their corrections (Levenshtein distance):")
 for misspelled, corrected in corrections.items():
     print(f"Correction: {corrected}, Misspelled: {misspelled}")
